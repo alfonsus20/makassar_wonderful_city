@@ -1,0 +1,684 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Rubik";
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* -------------------Reusable------------------- */
+
+.clear {
+  clear: both;
+}
+
+.judul {
+  font-size: 40px;
+  text-align: center;
+}
+
+.judul::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #00d9d1;
+  margin: 5px 0 20px 0;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+article {
+  padding: 75px 100px 50px 100px;
+  width: 100%;
+}
+
+/* ----------------------Landing Page--------------------------- */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../gambar/view2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Josefin Sans" !important;
+}
+
+.title h1 {
+  font-size: 80px;
+}
+
+.title h2 {
+  font-size: 40px;
+}
+
+nav {
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  font-size: 20px;
+  background-color: white;
+}
+
+.logo {
+  float: left;
+}
+
+.logo img {
+  height: 60px;
+  width: 120px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+nav ul {
+  float: right;
+  padding-top: 15px;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 8px 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-family: "Rubik";
+}
+
+nav ul li a:hover {
+  color: #00d9d1;
+}
+
+.burger {
+  position: absolute;
+  right: 0%;
+  margin-top: 23px;
+  margin-right: 40px;
+  display: none;
+}
+
+.about{
+  background-color: #00ccc5;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.about a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+/* ------------------Geografis Section------------------ */
+
+#geografis .judul::after {
+  background-color: yellow;
+}
+
+.pic-geografis {
+  float: left;
+  width: 30%;
+  padding-right: 30px;
+}
+
+.pic-geografis img {
+  height: auto;
+  width: 100%;
+}
+
+.geografis-inner {
+  display: flex;
+}
+
+.geografis-content {
+  float: right;
+  width: 70%;
+  font-size: 1.5vw;
+  height: 100%;
+  text-align: justify;
+}
+
+/* -------------------Wisata Section------------------- */
+
+#wisata {
+  background-color: #fafafa;
+}
+
+.wisata-content {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.card {
+  width: 22%;
+  flex-direction: column;
+  padding: 20px 0px;
+  border: none;
+  border-radius: 10px;
+  background-color: #00d9d1;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card .col {
+  background-color: white;
+  padding: 20px;
+  height: 100%;
+}
+
+.card .col h4 {
+  color: #00d9d1;
+  text-align: center;
+  font-size: 24px;
+}
+
+.card .col img {
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+}
+
+.card .col p {
+  font-size: 18px;
+  text-align: justify;
+}
+
+/* -----------------------Makanan Section--------------------- */
+
+#makanan-tradisional {
+  background-color: #00d9d1;
+}
+
+#makanan-tradisional .judul {
+  color: white;
+}
+
+#makanan-tradisional .judul::after {
+  background-color: yellow;
+}
+
+.list-makanan {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.makanan {
+  width: 30%;
+  height: 200px;
+  margin: 20px 0;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  overflow: hidden;
+}
+
+.makanan h4 {
+  transform: translateY(400%);
+  color: white;
+  transition: 0.5s;
+}
+
+.makanan:hover h4 {
+  transform: translateY(0);
+}
+
+.coto {
+  background-image: url("../gambar/coto.jpg");
+}
+
+.pallubasa {
+  background-image: url("../gambar/pallubasa.jpg");
+}
+.konro {
+  background-image: url("../gambar/konro.jpg");
+}
+.pisang-ijo {
+  background-image: url("../gambar/pisangijo.png");
+}
+.jalangkote {
+  background-image: url("../gambar/jalangkote.jpg");
+}
+.songkolo {
+  background-image: url("../gambar/songkolo.jpg");
+}
+
+.coto:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../gambar/coto.jpg");
+}
+
+.pallubasa:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../gambar/pallubasa.jpg");
+}
+.konro:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../gambar/konro.jpg");
+}
+.pisang-ijo:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../gambar/pisangijo.png");
+}
+.jalangkote:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../gambar/jalangkote.jpg");
+}
+.songkolo:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../gambar/songkolo.jpg");
+}
+
+/* ----------------Budaya Section-------------- */
+.budaya-inner {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+
+.budaya-content {
+  width: 60%;
+  font-size: 1vw;
+  text-align: justify;
+  margin-right: 40px;
+}
+
+.budaya-content li {
+  color: #00d9d1;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.budaya-gallery {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.budaya-gallery .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.budaya-gallery .row h4 {
+  text-align: center;
+  font-size: 14px;
+  color: black;
+}
+
+.budaya-gallery .row img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+#pic {
+  margin: 5px;
+  padding: 10px 5px 5px 5px;
+  border-radius: 10px;
+}
+
+/* --------------Footer---------------- */
+.comment-section {
+  float: left;
+  width: 75%;
+}
+
+.comment-section h2 {
+  color: #00d9d1;
+}
+
+.input-comment {
+  display: flex;
+  margin-top: 15px;
+}
+
+.input-comment img {
+  height: 100px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+textarea,
+input {
+  width: 80%;
+  height: auto;
+  resize: none;
+  overflow: auto;
+  border: 2px solid grey;
+}
+
+input:focus,
+textarea:focus {
+  border: none;
+  border: 2px solid #00d9d1;
+  box-shadow: 0 1px 8px 0 #00d9d1, 0 1px 8px 0 #00d9d1;
+}
+
+.comment {
+  width: 100%;
+}
+
+.profile {
+  float: right;
+  width: 25%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.profile img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 50%;
+}
+
+.choices button {
+  box-shadow: none;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 15px;
+  color: white;
+}
+
+#batal {
+  background-color: #999999;
+}
+
+#kirim {
+  background-color: #00d9d1;
+}
+
+.comments-container {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.comments-container img {
+  height: 80px;
+}
+
+.comment-content{
+  display: flex;
+  flex-direction: row;
+}
+
+.comments-inner {
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+}
+
+.comments-inner .name {
+  color: #00d9d1;
+  font-weight: bold;
+}
+footer {
+  padding-top: 50px;
+}
+
+.footer-1 {
+  padding: 20px 80px;
+}
+
+.profile-title {
+  color: #00d9d1;
+  font-size: 23px;
+  text-align: center;
+}
+
+.profile table {
+  margin: 5px auto;
+  font-size: 15px;
+  width: 100%;
+}
+
+tr td:first-child {
+  font-weight: bold;
+  text-align: right;
+}
+
+.footer-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #808080;
+  height: 40px;
+}
+
+/* ----------------Media Queries------------------ */
+
+@media screen and (max-width: 1300px) {
+  .profile table {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+  .judul {
+    font-size: 35px;
+  }
+
+ 
+}
+
+@media screen and (max-width: 1050px) {
+  nav {
+    background-color: transparent;
+  }
+  nav ul {
+    float: right;
+    width: 50%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    overflow: hidden;
+  }
+  nav ul {
+    transform: translateX(100%);
+    transition: 0.5s;
+  }
+  nav ul li {
+    display: block;
+  }
+  .logo {
+    width: 100%;
+    height: auto;
+    z-index: 9;
+    background-color: white;
+  }
+  #burger {
+    display: block;
+  }
+  #unseen {
+    width: 50%;
+    float: left;
+  }
+  .dark {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: auto;
+  }
+  .active {
+    transform: translateX(0%);
+  }
+  .geografis-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pic-geografis {
+    padding-right: 0px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .pic-geografis img {
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .geografis-content {
+    width: 80%;
+    font-size: 16px;
+  }
+  #budaya {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .budaya-inner {
+    flex-direction: column;
+    width: 80%;
+  }
+  .budaya-gallery {
+    order: 1;
+    width: 100%;
+  }
+  .budaya-content {
+    margin-top: 20px;
+    order: 2;
+    width: 100%;
+    font-size: 15px;
+  }
+  .budaya-content li {
+    font-size: 18px;
+  }
+  .comment-section {
+    width: 100%;
+  }
+  .profile-content {
+    width: 50%;
+  }
+  .profile {
+    float: right;
+    box-shadow: none;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  table tr td:first-child {
+    text-align: right;
+  }
+  .profile table {
+    width: 100%;
+  }
+  .profile img {
+    width: 60%;
+    height: auto;
+  }
+  .profile h4 {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  article {
+    padding: 70px 20px 50px 20px;
+  }
+  .title h1 {
+    font-size: 60px;
+  }
+  .title h2 {
+    font-size: 30px;
+  }
+  .about {
+    font-size: 18px;
+  }
+  #geografis p {
+    font-size: 15px;
+  }
+  .makanan {
+    width: 40%;
+  }
+  .profile-title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 80%;
+  }
+  .judul {
+    font-size: 30px;
+  }
+  .col p {
+    font-size: 15px;
+  }
+  .col h4 {
+    font-size: 18px;
+  }
+  .col img {
+    width: 80%;
+  }
+  .makanan {
+    width: 80%;
+  }
+  .input-comment textarea {
+    width: 100%;
+  }
+  .footer-1 {
+    padding: 30px 20px;
+  }
+  .profile-content {
+    width: 80%;
+  }
+  .profile table td {
+    font-size: 14px;
+  }
+}
