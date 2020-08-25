@@ -65,4 +65,4 @@ function renderComments() {
   }
 }
 
-document.onload(renderComments());
+renderComments();
