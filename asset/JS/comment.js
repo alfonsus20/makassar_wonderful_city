@@ -64,3 +64,5 @@ function renderComments() {
     commentList.appendChild(row);
   }
 }
+
+document.onload(renderComments());
